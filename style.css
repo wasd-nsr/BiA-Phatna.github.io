@@ -172,5 +172,13 @@ body {
 
 @media screen and (max-width: 479px) {
 	/* start of phone styles */
+	.card{
+		min-width: 140px;
+		height: 160px;
+		width: auto;
+	}
 
+	.card img{
+		height: 100px;
+	}
 }
