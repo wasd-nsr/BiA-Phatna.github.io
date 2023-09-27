@@ -4,19 +4,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive card Design</title>
+    <title>BiA - Phatna</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
     <section class="cards">
-        <!-- <div class="navbar">
 
-		</div> -->
+        <div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">หน้าหลัก</a>
+			<a href="history.html">ประวัติโรงเรียน</a>
+			<a href="plan.html">แผนผังโรงเรียน</a>
+			<a href="data.html">ข้อมูล</a>
+			<a href="product.html">ผลงาน</a>
+			<a href="contact.html">ติดต่อ</a>
+			<a href="report.html">แจ้งปัญหา</a>
+		</div>
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "100%";
+			}
+			
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
+
         <div class="header">
             <div class="card-header">
-                <i class="glyphicon glyphicon-list" style="width:15%; font-size:25px;color:rgb(255, 255, 255);"></i>
+                <span style=" color: #007fff; width:15%; font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
                 <h2>แผนผังโรงเรียน</h2>
 				<div style="width:15%"></div>
             </div>
