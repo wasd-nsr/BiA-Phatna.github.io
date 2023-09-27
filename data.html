@@ -7,39 +7,172 @@
     <title>BiA - Phatna</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="script.js"></script>
 </head>
 
 <body>
     <section class="cards">
         <div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="index.html">หน้าหลัก</a>
-			<a href="history.html">ประวัติโรงเรียน</a>
-			<a href="plan.html">แผนผังโรงเรียน</a>
-			<a href="data.html">ข้อมูล</a>
-			<a href="product.html">ผลงาน</a>
-			<a href="contact.html">ติดต่อ</a>
-			<a href="report.html">แจ้งปัญหา</a>
-		</div>
-		<script>
-			function openNav() {
-			  document.getElementById("mySidenav").style.width = "100%";
-			}
-			
-			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			}
-		</script>
+            <a href="history.html">ประวัติโรงเรียน</a>
+            <a href="plan.html">แผนผังโรงเรียน</a>
+            <a href="data.html">ข้อมูล</a>
+            <a href="product.html">ผลงาน</a>
+            <a href="contact.html">ติดต่อ</a>
+            <a href="report.html">แจ้งปัญหา</a>
+        </div>
+
         <div class="header">
             <div class="card-header">
-                <span style=" color: #007fff; width:15%; font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+                <span style=" color: #007fff; width:15%; font-size:30px;cursor:pointer" onclick="openNav()"> &#9776;
+                </span>
                 <h2>ข้อมูล</h2>
-				<div style="width:15%"></div>
+                <div style="width:15%"></div>
             </div>
         </div>
         <div class="menu">
             <div class="contents">
                 <img src="src/Picture3.png">
+                <div class="all-data">
+                    <div class="data-card column">
+
+                        <h3 style="font-weight: bold; color: #007fff;">ข้อมูลนักเรียนทั้งหมด</h3>
+
+                        <div id="data-card-info" class="row">
+                            <div class="chart-container">
+                                <canvas id="myChart"></canvas>
+                            </div>
+
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2/dist/chartjs-plugin-datalabels.min.js"></script>
+
+                            <script>
+
+                                const ctx = document.getElementById('myChart');
+                                Chart.register(ChartDataLabels);
+                                new Chart(ctx, {
+                                    type: 'doughnut',
+                                    data: data,
+                                    options: options
+                                });
+                            </script>
+
+
+                            <table style="width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">ระดับชั้น</th>
+                                    <th>จำนวน</th>
+                                </tr>
+                            </thead>
+                                <tr>
+                                    <td rowspan="1" style=" color: rgb(161, 208, 255); width:15%;font-size:50px;">
+                                        &#9632;</td>
+                                    <td>อนุบาล</td>
+                                    <td>321</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" style=" color: rgb(88, 171, 255); width:15%;font-size:50px;">
+                                        &#9632;</td>
+                                    <td>ประถมต้น</td>
+                                    <td>388</td>
+                                </tr>
+                                <tr>
+                                    <td>ประถมปลาย</td>
+                                    <td>312</td>
+                                </tr>
+                                <tr>
+                                    <td>รวม</td>
+                                    <td>700</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" style=" color: rgb(0, 127, 255); width:15%;font-size:50px;">
+                                        &#9632;</td>
+                                    <td>มัธยมต้น</td>
+                                    <td>1017</td>
+                                </tr>
+                                <tr>
+                                    <td>มัธยมปลาย</td>
+                                    <td>1008</td>
+                                </tr>
+                                <tr>
+                                    <td>รวม</td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">รวมนักเรียนทั้งหมด</td>
+                                            <td>3046</td>
+                                        </tr>
+                                    </tfoot>
+
+                            </table>
+
+                            
+                        </div>
+                    </div>
+                    <div class="data-card column">
+
+                        <h3 style="font-weight: bold; color: #007fff;">ข้อมูลบุคลากรทั้งหมด</h3>
+
+                        <div id="data-card-info" class="row">
+                            <div class="chart-container">
+                                <canvas id="myChart2"></canvas>
+                            </div>
+
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2/dist/chartjs-plugin-datalabels.min.js"></script>
+
+                            <script>
+
+                                const ctx2 = document.getElementById('myChart2');
+                                Chart.register(ChartDataLabels);
+                                new Chart(ctx2, {
+                                    type: 'doughnut',
+                                    data: data2,
+                                    options: options
+                                });
+                            </script>
+
+
+                            <table style="width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">เพศ</th>
+                                    <th>จำนวน</th>
+                                </tr>
+                            </thead>
+                                <tr>
+                                    <td rowspan="1" style=" color: rgb(88, 171, 255); width:15%;font-size:50px;">
+                                        &#9632;</td>
+                                    <td>ชาย</td>
+                                    <td>82</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="1" style=" color: rgb(0, 127, 255); width:15%;font-size:50px;">
+                                        &#9632;</td>
+                                    <td>หญิง</td>
+                                    <td>169</td>
+                                </tr>
+                               
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">รวมบุคลากรทั้งหมด</td>
+                                            <td>251</td>
+                                        </tr>
+                                    </tfoot>
+
+                            </table>
+
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
