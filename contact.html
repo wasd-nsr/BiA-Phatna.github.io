@@ -12,34 +12,67 @@
 <body>
     <section class="cards">
         <div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="index.html">หน้าหลัก</a>
-			<a href="history.html">ประวัติโรงเรียน</a>
-			<a href="plan.html">แผนผังโรงเรียน</a>
-			<a href="data.html">ข้อมูล</a>
-			<a href="product.html">ผลงาน</a>
-			<a href="contact.html">ติดต่อ</a>
-			<a href="report.html">แจ้งปัญหา</a>
-		</div>
-		<script>
-			function openNav() {
-			  document.getElementById("mySidenav").style.width = "100%";
-			}
-			
-			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			}
-		</script>
+            <a href="history.html">ประวัติโรงเรียน</a>
+            <a href="plan.html">แผนผังโรงเรียน</a>
+            <a href="data.html">ข้อมูล</a>
+            <a href="product.html">ผลงาน</a>
+            <a href="contact.html">ติดต่อ</a>
+            <a href="report.html">แจ้งปัญหา</a>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
         <div class="header">
             <div class="card-header">
-                <span style=" color: #007fff; width:15%; font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+                <span style=" color: #007fff; width:15%; font-size:30px;cursor:pointer" onclick="openNav()"> &#9776;
+                </span>
                 <h2>ติดต่อ </h2>
-				<div style="width:15%"></div>
+                <div style="width:15%"></div>
             </div>
         </div>
         <div class="menu">
             <div class="contents">
                 <img src="src/Picture5.png">
+                <div class="all-contact-cards">
+
+                    <a class="contact-card column" href="https://www.instagram.com/saaopw_official">
+                            <h3 style="font-weight: bold; color: #007fff;">Instagram Account</h3>
+    
+                            <div class="row" style="justify-content: space-between;">
+                                <img src="src/contact_ig.jpg" alt="Page QR Code">
+                                    <h4 style="font-weight: bold;">องค์การบริหารกิจการนักเรียน<br>โรงเรียนพัฒนาวิทยา ยะลา</h4>
+                            </div>
+                    </a>
+                
+
+                    
+                    <a class="contact-card column" href="https://www.facebook.com/phatnawityaYala?mibextid=2JQ9oc">
+
+                        <h3 style="font-weight: bold; color: #007fff;">Facebook Page</h3>
+                        <div class="row" style="justify-content: space-between;">
+                            <img src="src/facebook.png" alt="Page QR Code">
+                                <h4 style="font-weight: bold;">โรงเรียนพัฒนาวิทยา ยะลา</h4>
+                        </div>
+                    </a>
+
+                    <div class="contact-card column">
+
+                        <h3 style="font-weight: bold; color: #007fff;">Telephone</h3>
+                        <div class="row" style="justify-content: space-between;">
+                            <img  src="src/old-phone.png" alt="Page QR Code">
+                                <h4 style="font-weight: bold;">086 490 5787</h4>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
